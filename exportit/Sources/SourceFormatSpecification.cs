@@ -7,6 +7,7 @@
     using System.Threading.Tasks;
     using System.Windows.Forms;
 
+    [Serializable]
     public abstract class SourceFormatSpecification
     {
         public static Type[] AllTypes
@@ -16,6 +17,6 @@
                 return AppDomain.CurrentDomain.GetAssemblies().SelectMany(a => a.GetTypes()).Where(t => !t.IsAbstract && typeof(SourceFormatSpecification).IsAssignableFrom(t)).ToArray();
             }
         }
-        public abstract Control CreateEditor();
+        public abstract Control CreateEditor(byte[] sample);
     }
 }

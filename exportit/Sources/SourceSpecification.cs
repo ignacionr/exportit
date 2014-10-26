@@ -8,6 +8,7 @@
     using System.Threading.Tasks;
     using System.Windows.Forms;
 
+    [Serializable]
     abstract public class SourceSpecification
     {
         public static Type[] AllTypes
@@ -20,6 +21,6 @@
 
         public abstract Control CreateEditor();
 
-        public abstract Task ProcessContents(Action<Stream> doWithContents);
+        public abstract Task ProcessContents(Action<Stream> doWithContents, int limit);
     }
 }

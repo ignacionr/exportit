@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace exportit
+﻿namespace exportit
 {
+    using System;
+    using Sources;
+
+    [Serializable]
     public class JobSpecification
     {
         public SourceSpecification Source;
+
+        public SourceFormatSpecification Format { get; set; }
     }
 }

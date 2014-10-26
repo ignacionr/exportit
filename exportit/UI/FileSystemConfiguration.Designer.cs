@@ -53,6 +53,7 @@
             this.textLocation.Name = "textLocation";
             this.textLocation.Size = new System.Drawing.Size(267, 20);
             this.textLocation.TabIndex = 1;
+            this.textLocation.TextChanged += new System.EventHandler(this.textLocation_TextChanged);
             // 
             // btnChooseFolder
             // 
@@ -82,6 +83,7 @@
             this.textPattern.Name = "textPattern";
             this.textPattern.Size = new System.Drawing.Size(267, 20);
             this.textPattern.TabIndex = 1;
+            this.textPattern.TextChanged += new System.EventHandler(this.textLocation_TextChanged);
             // 
             // FileSystemConfiguration
             // 
